@@ -25,6 +25,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python scripts/update_commit_time.py
+      - name: Update pinned Gist
+        env:
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: python scripts/update_gist.py --gist-id 39364fb77de56eae9873d4ed1bea0059
       - name: Publish card
         run: |
           if git diff --quiet -- assets/commit-time.svg; then

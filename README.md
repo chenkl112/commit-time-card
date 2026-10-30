@@ -15,6 +15,8 @@
 
 GitHub Actions 每天 09:23 更新，也可以在 Actions → Update commit time card → Run workflow 手动刷新。计划任务可能延迟；检索失败时保留上一张卡片。
 
+同一任务还会同步[置顶 Gist](https://gist.github.com/chenkl112/39364fb77de56eae9873d4ed1bea0059)的四行文本。凭据放在仓库 Actions secret `GIST_TOKEN` 中，需要 `gist` 权限。Gist 保留原 ID，描述保持为空，置顶标题使用文件名。
+
 本地更新需要 Python 3.10 或更新版本，只用标准库：
 
 ```bash
